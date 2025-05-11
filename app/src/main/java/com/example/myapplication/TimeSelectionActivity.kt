@@ -39,9 +39,13 @@ class TimeSelectionActivity : AppCompatActivity() {
             pickTime { time -> endTime = time }
         }
 
+
         handler = Handler(Looper.getMainLooper())
         handler.post(updateRunnable(imageView))
     }
+
+
+
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun pickTime(onTimePicked: (LocalTime) -> Unit) {
